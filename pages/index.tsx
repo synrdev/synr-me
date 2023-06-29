@@ -61,13 +61,13 @@ const Home: NextPage = () => {
         <Stack spacing={6} mt={"16"} align="center">
           <Heading>さねら</Heading>
           <HStack>
-            <Link href="https://twitter.com/synr">
+            <Link href="https://twitter.com/synrdev">
               <Icon as={FaTwitter} w={6} h={6} />
             </Link>
-            <Link href="https://github.com/synr">
+            <Link href="https://github.com/synrdev">
               <Icon as={FaGithub} w={6} h={6} />
             </Link>
-            <Link href="https://zenn.dev/synr">
+            <Link href="https://zenn.dev/synrdev">
               <Icon as={SiZenn} w={6} h={6} />
             </Link>
           </HStack>
