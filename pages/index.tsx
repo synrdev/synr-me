@@ -74,7 +74,7 @@ const Home: NextPage = () => {
         </Stack>
       </Box>
       <Flex as="footer" position="fixed" width="full" bottom={0} py={4} px={8}>
-        <Link href="https://github.com/synr/synr-me">
+        <Link href="https://github.com/synrdev/synr-me">
           <Icon as={FaGithub} w={6} h={6} />
         </Link>
         <Spacer></Spacer>
