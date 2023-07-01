@@ -54,7 +54,7 @@ const Home: NextPage = () => {
             src="https://avatars.githubusercontent.com/u/138139785?v=4"
             alt="synr"
             borderRadius="full"
-            loading="lazy"
+            decoding="async"
             maxW="300"
           />
           <Spacer></Spacer>
