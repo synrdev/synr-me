@@ -4,7 +4,7 @@ import { ChakraProvider, extendTheme } from "@chakra-ui/react";
 import "@fontsource/jetbrains-mono";
 
 const config = {
-  initialColorMode: "dark",
+  initialColorMode: 'light',
   useSystemColorMode: false,
 };
 
