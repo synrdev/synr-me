@@ -15,7 +15,8 @@ import {
   useColorMode,
 } from "@chakra-ui/react";
 import { MoonIcon, SunIcon } from "@chakra-ui/icons";
-import { FaGithub, FaTwitter, FaBlogger } from "react-icons/fa";
+import { FaGithub, FaTwitter } from "react-icons/fa";
+import { SiZenn } from "react-icons/si";
 
 const Home: NextPage = () => {
   const { colorMode, toggleColorMode } = useColorMode();
@@ -67,8 +68,8 @@ const Home: NextPage = () => {
             <Link href="https://github.com/synrdev">
               <Icon as={FaGithub} w={6} h={6} />
             </Link>
-            <Link href="https://blog.synr.me/">
-              <Icon as={FaBlogger} w={6} h={6} />
+            <Link href="https://zenn.dev/synrdev">
+              <Icon as={SiZenn} w={6} h={6} />
             </Link>
           </HStack>
         </Stack>
