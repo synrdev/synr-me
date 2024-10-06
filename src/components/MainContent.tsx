@@ -49,6 +49,9 @@ export const MainContent = () => {
       animate={{ opacity: 1 }}
       transition={{ duration: 0.6 }}
       p={8}
+      minHeight="100vh"
+      bg="rgba(26, 32, 44, 0.7)"
+      backdropFilter="blur(10px)"
     >
       <Flex
         direction={{ base: "column", md: "row" }}
@@ -69,7 +72,11 @@ export const MainContent = () => {
           animate={{ scale: 1, opacity: 1 }}
           transition={{ delay: 0.3, duration: 0.6 }}
         />
-        <Stack spacing={6} align={{ base: "center", md: "flex-start" }}>
+        <Stack
+          spacing={6}
+          align={{ base: "center", md: "flex-start" }}
+          ml={{ md: 8 }}
+        >
           <Box textAlign={{ base: "center", md: "left" }}>
             <MotionHeading
               initial={{ opacity: 0, y: 20 }}

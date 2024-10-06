@@ -1,4 +1,4 @@
-import { Box, IconButton, Text, VStack } from "@chakra-ui/react";
+import { Box, IconButton, Text, VStack, useColorMode } from "@chakra-ui/react";
 import { CloseIcon } from "@chakra-ui/icons";
 
 interface SidebarProps {
@@ -7,6 +7,8 @@ interface SidebarProps {
 }
 
 export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
+  const { colorMode } = useColorMode();
+
   return (
     <Box
       position="fixed"
@@ -14,13 +16,18 @@ export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
       top={0}
       width="250px"
       height="100vh"
-      bg="gray.700"
-      color="white"
+      bg={
+        colorMode === "light"
+          ? "rgba(255, 255, 255, 0.9)"
+          : "rgba(26, 32, 44, 0.9)"
+      }
+      color={colorMode === "light" ? "gray.800" : "white"}
       transition="right 0.3s ease"
       zIndex={20}
       p={4}
       boxShadow="lg"
       borderRadius="md"
+      backdropFilter="blur(10px)"
     >
       <IconButton
         aria-label="Close Sidebar"
