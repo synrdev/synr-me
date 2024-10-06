@@ -1,26 +1,20 @@
-import "../styles/app.css";
+import { useEffect } from "react";
 import type { AppProps } from "next/app";
-import { ChakraProvider, extendTheme } from "@chakra-ui/react";
+import { ChakraProvider } from "@chakra-ui/react";
+import { theme } from "../styles/theme";
 import "@fontsource/jetbrains-mono";
 
-const config = {
-  initialColorMode: 'light',
-  useSystemColorMode: false,
-};
+export default function App({ Component, pageProps }: AppProps) {
+  useEffect(() => {
+    const jssStyles = document.querySelector("#jss-server-side");
+    if (jssStyles) {
+      jssStyles.parentElement!.removeChild(jssStyles);
+    }
+  }, []);
 
-const theme = extendTheme({
-  fonts: {
-    heading: "JetBrains Mono",
-  },
-  config,
-});
-
-function MyApp({ Component, pageProps }: AppProps) {
   return (
     <ChakraProvider theme={theme}>
       <Component {...pageProps} />
     </ChakraProvider>
   );
 }
-
-export default MyApp;
