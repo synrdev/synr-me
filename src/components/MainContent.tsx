@@ -95,7 +95,7 @@ export const MainContent = () => {
                 <SocialIcon
                   key="twitter"
                   icon={FaTwitter}
-                  href="https://twitter.com/synrdev"
+                  href="https://x.com/synr_27"
                   size={iconSize || 20}
                 />
                 <SocialIcon
