@@ -35,7 +35,8 @@ export const ThreeBackground: React.FC = () => {
   }, []);
 
   useEffect(() => {
-    if (!mountRef.current) return;
+    const currentMount = mountRef.current;
+    if (!currentMount) return;
 
     const scene = new THREE.Scene();
     const camera = new THREE.PerspectiveCamera(
@@ -48,7 +49,7 @@ export const ThreeBackground: React.FC = () => {
 
     renderer.setSize(window.innerWidth, window.innerHeight);
     renderer.setPixelRatio(window.devicePixelRatio);
-    mountRef.current.appendChild(renderer.domElement);
+    currentMount.appendChild(renderer.domElement);
 
     const particles = createParticles();
     scene.add(particles);
@@ -91,7 +92,7 @@ export const ThreeBackground: React.FC = () => {
     return () => {
       window.removeEventListener("resize", handleResize);
       window.removeEventListener("mousemove", handleMouseMove);
-      mountRef.current?.removeChild(renderer.domElement);
+      currentMount.removeChild(renderer.domElement);
     };
   }, [createParticles]);
 
