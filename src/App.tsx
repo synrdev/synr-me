@@ -14,7 +14,7 @@ const theme = extendTheme({
 function App() {
   return (
     <ChakraProvider theme={theme}>
-      <Box position="relative" min-height="100vh" min-width="100vw">
+      <Box position="relative" minH="100vh" minW="100vw">
         <ThreeBackground />
         <Header />
         <MainContent />
